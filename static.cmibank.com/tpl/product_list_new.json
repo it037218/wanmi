@@ -1,0 +1,41 @@
+{
+    "groups": [
+        {
+			"name":"易米宝",
+			"weight":3,
+			"type":"longproduct",
+			"menbers":
+			[
+				{
+					"type":"longproduct",
+					"name":"正在发售"
+				},
+				{
+					"type":"sellout",
+					"name":"募集完成"
+				}
+			]
+        }
+        ,
+        {
+			"name":"定期发售",
+			"weight":2,
+			"type":"product",
+			"menbers":
+			[
+				{
+					"type":"product",
+					"name":"正在发售"
+				},
+				{
+					"type":"complete",
+					"name":"已还款"
+				},
+				{
+					"type":"sellout",
+					"name":"募集完成"
+				}
+			]
+        }
+    ]
+}

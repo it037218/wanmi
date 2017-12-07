@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<message><head><merchant_id>290060100017</merchant_id><tran_type>01</tran_type><version>1.0.0</version><tran_flowid>29006012000520160505020815158392</tran_flowid><tran_date>20160505</tran_date><tran_time>100823</tran_time><tran_code>TR4003</tran_code></head><body><bank_card_no>6214920602483487</bank_card_no><bank_code>03030000</bank_code><id_num>430623198511046136</id_num><id_name>张宏</id_name><terminal_type>01</terminal_type><bank_card_type>D</bank_card_type><phone_no>15099918724</phone_no></body></message>
+
+<?xml version="1.0" encoding="utf-8"?>
+<message><head><merchant_id>290060100017</merchant_id><tran_type>01</tran_type><version>1.0.0</version><tran_flowid>29006012000520160505021755454418</tran_flowid><tran_date>20160505</tran_date><tran_time>101811</tran_time><tran_code>TR4003</tran_code></head><body><bank_card_no>6214920602483487</bank_card_no><bank_code>03030000</bank_code><id_num>430623198511046136</id_num><id_name>张宏</id_name><terminal_type>01</terminal_type><bank_card_type>D</bank_card_type><phone_no>15099918724</phone_no></body></message>
+

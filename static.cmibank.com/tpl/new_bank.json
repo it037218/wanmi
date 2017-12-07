@@ -1,0 +1,380 @@
+{
+    "ICBC": {
+        "code": "ICBC",
+        "jyt_bank_code": "01020000",
+        "name": "中国工商银行",
+        "url": "static1.cmibank.com/icon/bank/ICBC.jpg",
+        "single": 50000,
+        "singleDay": 50000,
+        "singleMonth": 1500000,
+        "quota": {
+            "jytpay": { 
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 100000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "ABC": {
+        "code": "ABC",
+        "jyt_bank_code": "01030000",
+        "name": "中国农业银行",
+        "url": "static1.cmibank.com/icon/bank/ABC.jpg",
+        "single": 50000,
+        "singleDay": 100000,
+        "singleMonth": 3000000,
+        "quota": {
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            },
+             "jytpay": {
+                "single": 50000,
+                "singleDay": 100000,
+                "singleMonth": 3000000
+            },
+            "baofoo": {
+                "single": 50000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "BOC": {
+        "code": "BOC",
+        "jyt_bank_code": "01040000",
+        "name": "中国银行",
+        "url": "static1.cmibank.com/icon/bank/BOC.jpg",
+        "single": 50000,
+        "singleDay": 500000,
+        "singleMonth": 15000000,
+        "quota": {
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 500000,
+                "singleMonth": 15000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "CCB": {
+        "code": "CCB",
+        "jyt_bank_code": "01050000",
+        "name": "中国建设银行",
+        "url": "static1.cmibank.com/icon/bank/CCB.jpg",
+        "single": 50000,
+        "singleDay": 500000,
+        "singleMonth": 1500000,
+        "quota": {
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 500000,
+                "singleMonth": 15000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 100000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "CEB": {
+        "code": "CEB",
+        "jyt_bank_code": "03030000",
+        "name": "中国光大银行",
+        "url": "static1.cmibank.com/icon/bank/CEB.jpg",
+        "single": 50000,
+        "singleDay": 1000000,
+        "singleMonth": 30000000,
+        "quota": {
+            "jytpay": {
+                "single": 500000,
+                "singleDay": 1000000,
+                "singleMonth": 30000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "PINGAN": {
+        "code": "PINGAN",
+        "jyt_bank_code": "03070000",
+        "name": "平安银行",
+        "url": "static1.cmibank.com/icon/bank/PINGAN.jpg",
+        "single": 500000,
+        "singleDay": 5000000,
+        "singleMonth": 50000000,
+        "quota": {
+            "jytpay": {
+                "single": 500000,
+                "singleDay": 5000000,
+                "singleMonth": 50000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 100000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "CIB": {
+        "code": "CIB",
+        "jyt_bank_code": "03090000",
+        "name": "兴业银行",
+        "url": "static1.cmibank.com/icon/bank/CIB.jpg",
+        "single": 50000,
+        "singleDay": 50000,
+        "singleMonth": 15000000,
+        "quota": {
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 15000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "SPDB": {
+        "code": "SPDB",
+        "jyt_bank_code": "03100000",
+        "name": "上海浦东发展银行",
+        "url": "static1.cmibank.com/icon/bank/SPDB.jpg",
+        "single": 50000,
+        "singleDay": 100000,
+        "singleMonth": 3000000,
+        "quota": {
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 100000,
+                "singleMonth": 3000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 100000,
+                "singleDay": 100000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "ECITIC": {
+        "code": "ECITIC",
+        "jyt_bank_code": "03020000",
+        "name": "中信银行",
+        "url": "static1.cmibank.com/icon/bank/ECITIC.jpg",
+        "single": 5000,
+        "singleDay": 5000,
+        "singleMonth": 20000,
+        "quota": {
+        	"fuiou": {
+                "single": 10000,
+                "singleDay": 10000,
+                "singleMonth": 20000
+            },
+            "jytpay": {
+                "single": 1000,
+                "singleDay": 1000,
+                "singleMonth": 2000
+            },
+            "baofoo": {
+                "single": 10000,
+                "singleDay": 10000,
+                "singleMonth": 20000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "GDB": {
+        "code": "GDB",
+        "jyt_bank_code": "03060000",
+        "name": "广发银行",
+        "url": "static1.cmibank.com/icon/bank/GDB.jpg",
+        "single": 500000,
+        "singleDay": 2000000,
+        "singleMonth": 10000000,
+        "quota": {
+            "jytpay": {
+                "single": 500000,
+                "singleDay": 2000000,
+                "singleMonth": 10000000
+            },
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 100000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "SHB": {
+        "code": "SHB",
+        "jyt_bank_code": "04012900",
+        "name": "上海银行",
+        "url": "static1.cmibank.com/icon/bank/SHB.jpg",
+        "single": 5000,
+        "singleDay": 50000,
+        "singleMonth": 1500000,
+        "quota": {
+        	"baofoo": {
+                "single": 50000,
+                "singleDay": 1000000,
+                "singleMonth": 15000000
+            },
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1000000
+            },
+            "fuiou": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+     "POST": {
+        "code": "POST",
+        "jyt_bank_code": "01000000",
+        "name": "中国邮政储蓄银行",
+        "url": "static1.cmibank.com/icon/bank/POST.jpg",
+        "single": 50000,
+        "singleDay": 300000,
+        "singleMonth": 9000000,
+        "quota": {
+        	"jytpay": {
+                "single": 50000,
+                "singleDay": 300000,
+                "singleMonth": 9000000
+            },
+        	"baofoo": {
+                "single": 5000,
+                "singleDay": 5000,
+                "singleMonth": 150000
+            },
+        	"fuiou": {
+                "single": 100000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "BOCO": {
+        "code": "BOCO",
+        "jyt_bank_code": "03010000",
+        "name": "交通银行",
+        "url": "static1.cmibank.com/icon/bank/BOCO.jpg",
+        "single": 50000,
+        "singleDay": 100000,
+        "singleMonth": 3000000,
+        "quota": {
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 100000,
+                "singleMonth": 3000000
+            },
+        	"baofoo": {
+                "single": 9000,
+                "singleDay": 9000,
+                "singleMonth": 270000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    },
+    "CMBCHINA": {
+        "code": "CMBCHINA",
+        "jyt_bank_code": "03080000",
+        "name": "招商银行",
+        "url": "static1.cmibank.com/icon/bank/CMBCHINA.jpg",
+        "single": 50000,
+        "singleDay": 50000,
+        "singleMonth": 1500000,
+        "quota": {
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 500000
+            },
+            "jytpay": {
+                "single": 50000,
+                "singleDay": 50000,
+                "singleMonth": 1500000
+            },
+        	"fuiou": {
+                "single": 50000,
+                "singleDay": 200000,
+                "singleMonth": 1000000
+            }
+        },
+        "plat": "fuiou"
+    }
+}

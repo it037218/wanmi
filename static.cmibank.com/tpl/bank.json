@@ -1,0 +1,75 @@
+{
+  "ICBC": {
+    "code": "ICBC",
+    "name": "中国工商银行",
+    "url": "static1.cmibank.com/icon/bank/ICBC.jpg",
+    "single": 49999,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "ABC": {
+    "code": "ABC",
+    "name": "中国农业银行",
+    "url": "static1.cmibank.com/icon/bank/ABC.jpg",
+    "single": 19999,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "BOC": {
+    "code": "BOC",
+    "name": "中国银行",
+    "url": "static1.cmibank.com/icon/bank/BOC.jpg",
+    "single": 49999,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+
+  },
+  "CCB": {
+    "code": "CCB",
+    "name": "中国建设银行",
+    "url": "static1.cmibank.com/icon/bank/CCB.jpg",
+    "single": 100000,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "CEB": {
+    "code": "CEB",
+    "name": "中国光大银行",
+    "url": "static1.cmibank.com/icon/bank/CEB.jpg",
+    "single": 100000,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "HXB": {
+    "code": "HXB",
+    "name": "华夏银行",
+    "url": "static1.cmibank.com/icon/bank/HXB.jpg",
+    "single": 100000,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "PINGAN": {
+    "code": "PINGAN",
+    "name": "平安银行",
+    "url": "static1.cmibank.com/icon/bank/PINGAN.jpg",
+    "single": 100000,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "CIB": {
+    "code": "CIB",
+    "name": "兴业银行",
+    "url": "static1.cmibank.com/icon/bank/CIB.jpg",
+    "single": 100000,
+    "singleDay": 500000,
+    "singleMonth": 10000000
+  },
+  "SPDB": {
+    "code": "SPDB",
+    "name": "上海浦东发展银行",
+    "url": "static1.cmibank.com/icon/bank/SPDB.jpg",
+    "single": 49999,
+    "singleDay": 49999,
+    "singleMonth": 10000000
+  },
+}

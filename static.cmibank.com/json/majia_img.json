@@ -1,0 +1,32 @@
+{
+    "error": 0,
+    "data": {
+        "banner": {
+            "4": {
+                "bid": "93",
+                "title": "阳光保险",
+                "content": "",
+                "img": "http://upload1.kdlc.cn/upload/ec/cb/3/20150812/143936864565464_0.jpg",
+                "uri": "",
+                "type": "0",
+                "location": "4",
+                "ctime": "1453793102",
+                "startime": "2016-02-01 09:53:51",
+                "endtime": "2016-03-04 18:00:00"
+            },
+			"5": {
+                "bid": "93",
+                "title": "随存随取",
+                "content": "",
+                "img": "http://upload1.kdlc.cn/upload/ec/cb/3/20150812/143936858957073_0.jpg",
+                "uri": "",
+                "type": "0",
+                "location": "4",
+                "ctime": "1453793102",
+                "startime": "2016-02-01 09:53:51",
+                "endtime": "2016-03-04 18:00:00"
+            }
+        }
+    },
+    "serverip": "0.0.0.0"
+}

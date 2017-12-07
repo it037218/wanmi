@@ -1,0 +1,32 @@
+{
+    "groups": [
+        [
+			"活期发售",
+            "定期发售"
+        ],
+        [
+            "正在发售",
+            "募集完成"
+        ],
+        [
+            "正在发售",
+            "已还款",
+            "募集完成"
+        ]
+    ],
+    "members": [
+        [
+			"longproduct",
+            "product"
+        ],
+        [
+            "longproduct",
+            "sellout"
+        ],
+        [
+            "product",
+            "complete",
+            "sellout"
+        ]
+    ]
+}

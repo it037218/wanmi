@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+<title>关于我们</title>
+<meta name="viewport" content="target-densitydpi=device-dpi;width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+	*{
+		list-style: none;
+		text-decoration: none;
+		margin: 0 auto;
+		font-family:"微软雅黑";
+	}
+	a{
+		color:#000000;
+	}
+	.top_menu{
+		width: 60%;
+		height:126px;
+		max-width: 1920px;
+		min-width: 900px;
+		top:20px;
+	}
+	.nav{
+		width: 100%;
+		height: 20px;
+		max-width: 1920px;
+		min-width: 900px;
+		font-size: 12px;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		color: #666666;
+	}
+	.nav .qq{
+		vertical-align: middle;
+	}
+	.nav .app_phone {
+		font-size: 12px;
+		color: #666666;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		position:relative;
+		vertical-align: middle;
+	}
+	.app_phone:hover{
+		color: red;
+		cursor: pointer;
+		text-decoration:underline;
+	}
+
+	.nav .app_phone .download_img{
+		position: absolute;
+		vertical-align: middle;
+		display: none;
+		border: 1px solid #e5e5e5;
+		width: 400px;
+		height: 200px;
+		background: #ffffff;
+		right: -1px;
+		top: 18px;
+		z-index: 1000;
+	}
+	.app_phone:hover .download_img{
+		display:inline-block;
+	}
+	.download_img .floatL{
+		width: 130px;
+		float: left;
+		margin: 20px 0px 0px 55px;
+	}
+	.download_img .floatR{
+		width: 130px;
+		float: right;
+		margin: 20px 55px 0px 0px;
+	}
+	.common_qrcode_org{
+		width: 130px;
+		height: 130px;
+	}
+	.fontSet{
+		width:130px;
+		height: 130px;
+		line-height: 36px;
+		color: #1aac19;
+		font-size: 14px;
+	}
+	.nav div{
+		float: right;
+	}
+	.navUl li{
+		float: left;
+		line-height:80px;
+		font-size:18px;
+	}
+	.navUl li:hover{
+		border-bottom:4px solid #fd5a5a;
+	}
+
+	a:active{
+		color:#bf5959;
+	}
+	.logo{
+		float: left;
+	}
+	.navUl{
+		float: left;
+	}
+	.navul1{
+		margin-right:46px;
+	}
+	#Gradient{
+		width: 100%;
+		height: 20px;
+		background-image: url('images/导航20.png') ;
+		max-width: 1920px;
+		min-width: 900px;
+	}
+	.img5{
+		width:20%;
+		height:62px;
+		text-align:right;
+		margin-top:16px;
+		font-size:12px;
+	}
+	
+	#showimg{
+	
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	#showimg1{
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	
+	
+	#all{
+		
+		
+	}
+	#introduce,#security,#intimate ,#foot{
+		width: 1024px;
+	}
+	h3{
+		padding-top:50px;
+		font-size:22px;
+		color: red;
+		padding-bottom: 20px;
+		font-weight:500;
+		border-bottom:1px solid  #d1d1d1;
+	}
+	
+	
+	
+	.title{
+		text-align: center;
+		width:240px;
+		line-height:36px;
+		height:36px;
+		background-image: url('images1/圆角矩形.png');
+		margin-top: 35px;
+		font-size:18px;
+		margin-bottom:15px;
+	}
+	.title1{
+		text-align: center;
+		width:340px;
+		line-height:36px;
+		height:36px;
+		background-image: url('images1/圆角矩形chang.png');
+		margin-top: 35px;
+		margin-bottom:15px;
+	}
+	.tit{
+		line-height: 200%;
+	}
+	.title + p,.title1 + p{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	#business{
+		width: 1024px;
+		height: 244px;
+	}
+	#business>div{
+		float: left;
+		width: 324px;
+		height: 244px;	
+		background-image: url('images1/300x220.png');
+		text-align: center;
+		
+		
+	}
+	#business img{
+		margin-top: 70px;	
+		margin-bottom: 15px;
+	}
+	#investment{
+		width: 1024px;
+		height: 274px;
+	}
+	#investment>div{
+		
+		float: left;
+		width: 204px;
+		height: 274px;	
+		background-image: url('images1/190x250.png');
+		text-align: center;
+		
+		
+	}
+	#investment img{
+		margin-top: 80px;	
+		margin-bottom: 15px;
+	}
+	
+	
+	#account{
+		width: 1024px;
+		height: 274px;
+	}
+	#account>div{
+		
+		float: left;
+		width: 244px;
+		height: 274px;	
+		background-image: url('images1/220x250.png');
+		text-align: center;
+		
+	}
+	#account img{
+		margin-top: 80px;	
+		margin-bottom: 15px;
+	}
+	#wcdog>div{
+		float: left;
+		width: 504px;
+		height: 274px;	
+		background-image: url('images1/480x250.png');
+		
+		
+	}
+	#account{
+		width: 1024px;
+		height: 274px;
+	}
+	
+	.p1{
+		line-height:90px; 
+		text-align: center;
+	}
+	.p1+p{
+		margin: 0 50px 0;
+		line-height: 150%;
+	}
+	.p2{
+		margin-left: 30px;
+		line-height: 200%;
+	}
+	.describe{
+		margin: 40px 50px 0;
+		text-align: left;
+		line-height: 150%;
+	}
+	.describe1{
+		margin: 40px 20px 0 35px;
+		text-align: left;
+		line-height: 150%;
+	}
+	.describe2{
+		margin: 40px 20px 0 35px;
+		text-align: left;
+		line-height: 150%;
+	}
+	.view{
+		border-bottom:4px solid #fd5a5a;
+	}
+	.border_line{
+		width: 100%;
+		border-bottom: 1px solid #ebebeb;
+	}
+
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(".pp").hover(
+				 function () {
+				    $(".pp1",$(this)).css("display","none");
+				    $(".pp2",$(this)).css("display","");
+				    $(this).css("background-image","url('images1/300x220经过.png')");
+				},function(){
+					$(".pp1",$(this)).css("display","");
+					$(".pp2",$(this)).css("display","none");
+					$(this).css("background-image","url('images1/300x220.png')");
+		});
+		$(".ppp").hover(
+				 function () {
+				    $(".pp1",$(this)).css("display","none");
+				    $(".pp2",$(this)).css("display","");
+				    $(this).css("background-image","url('images1/190x250经过.png')");
+				},function(){
+					$(".pp1",$(this)).css("display","");
+					$(".pp2",$(this)).css("display","none");
+					$(this).css("background-image","url('images1/190x250.png')");
+		});
+		$(".pppp").hover(
+				 function () {
+				    $(".pp1",$(this)).css("display","none");
+				    $(".pp2",$(this)).css("display","");
+				    $(this).css("background-image","url('images1/220x250经过.png')");
+				},function(){
+					$(".pp1",$(this)).css("display","");
+					$(".pp2",$(this)).css("display","none");
+					$(this).css("background-image","url('images1/220x250.png')");
+		});
+		$(".ppppp").hover(
+				 function () {
+				    $(".pp1",$(this)).css("display","none");
+				    $(".pp2",$(this)).css("display","");
+				    $(this).css("background-image","url('images1/480x250经过.png')");
+				},function(){
+					$(".pp1",$(this)).css("display","");
+					$(".pp2",$(this)).css("display","none");
+					$(this).css("background-image","url('images1/480x250.png')");
+		});
+		$("#li1").css("background-color","#ebebeb");
+		var $view = $(".navUl").find("ul li"); //显示所有编号的li
+    	$view.eq(3).addClass("view");
+	});
+	function showimg(){
+		$("#showimg").css("display","");
+	}
+	function showimg1(){
+		$("#showimg1").css("display","");
+	}
+	function showimg3(){
+		$("#showimg").css("display","none");
+	}
+	function showimg4(){
+		$("#showimg1").css("display","none");
+		
+	}
+	
+
+</script>
+</head>
+<body>
+<div style="height: 1000px;width: 100%;">
+	<div class="top_menu" style="margin-top: 10px;">
+		<div class="nav" style="width: 100%;">
+			<div style="width: 80%;float: left">
+				<img class="phone" src="images/kefu_shouye.png">
+				<span style="font-size: 12px; color: red;padding: 0px">客服热线：400-080-5611</span><span style="font-size: 12px;">（服务时间8：00-20：00）</span>
+			</div>
+			<div style="width:20%;text-align: center">
+				<img class="qq" src="images/qq_shouye.png">
+				<span style="font-size: 12px;">QQ群：198595909</span>
+				<div class="app_phone">
+					<span style="font-size: 12px;float: right">手机APP</span>
+					<div class="download_img">
+						<div class="floatL">
+							<div><img class="common_qrcode_org" src="images/download_android_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=2">Android下载</a></span>
+						</div>
+						<div class="floatR">
+							<div><img class="common_qrcode_org" src="images/down_load_iphone_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=1">Iphone下载</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border_line"></div>
+			<div style="width: 100%;height: 20px"></div>
+		</div>
+	    <div class="box" style="width: 100%;height: 100px;max-width: 1920px;min-width: 100px;">
+	        <div class="navUl" style="width:20%;max-width: 1920px;min-width: 100px">
+	            <img src="images/logo.png"/>
+	        </div>
+			<div class="navUl" style="width:60%;max-width: 1920px;padding-left:100px;min-width: 100px;float: right">
+		        <ul >
+		            <li id="myhome" class="navul1"><a href="index.html">首页</a></li>
+		            <li id="myInvestment" class="navul1">
+		                <a href="security.html">安全保障</a>
+		            </li>
+		            <li id="scoreMall" class="navul1"><a href="product.html">理财产品</a></li>
+		            <li id="aboutUs" ><a href="understand.html">关于我们</a></li>
+		        </ul>
+	    	</div>
+	    </div>
+	</div>
+	
+	<div id="Gradient">
+	</div>
+	<div id="introduce">
+			<h3>了解我们</h3>
+			<div style="margin-bottom: 60px;text-align: center;padding-top: 50px;">
+				<p>易米融平台是由万米财富管理有限公司和佰付通信息技术（上海）有限公司联合研发推出的一款安全、
+				方便、高收益的金融信息服务平台。<br/>以用户的资金安全为第一准则，为用户
+				精心推荐安全性高，收益适中的理财产品。通过卓越的运营管理团队，<br/>严格
+				的风控措施，多重资金安全保障服务，让用户能够放心理财，投资无忧。</p>
+			</div>
+			
+	</div>
+	<div id="all">
+	
+		<div style="background-color: #ebebeb;">
+			<div id="security">	
+				<h3>多重安全保障</h3>
+				<div style="margin-bottom: 65px;">
+					<p class="title">业务模式安全</p>
+					<p class="tit">易米融平台采用安全性更高的P2B模式，同时秉承“不要把所有的
+					鸡蛋放在一个篮子里”的风险投资理念，采取分散投资，<br/>谨慎授信的模
+					式提升投资安全性。</p>
+					<div id="business">
+						<div class="pp" style="margin-right: 23px;">
+							<div class="pp1">
+								<img alt="" src="images1/p2b.png">
+								<p>安全性更高的P2B模式</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe">借款人均为企业，借款企业提供物品或资产抵押作为控制风险的方
+								式，同时借款企业及其法人（或实际控股的大股东）分别提供企业担保
+								及个人担保，不提供纯粹的信用无抵押借款，安全性大大提高</p>
+							</div>
+						</div>
+						<div class="pp" style="margin-right: 23px;">
+							<div class="pp1">
+								<img alt="" src="images1/分散.png">
+								<p>分散投资</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe">易米融平台目前已经和多家金融机构或企业进行合作，且合作企业
+								数量在持续增加中</p>
+							</div>
+						</div>
+						<div class="pp">
+							<div class="pp1">
+								<img alt="" src="images1/谨慎.png">
+								<p>谨慎授信</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe">根据每家合作金融机构及企业的业务规模，提供远低于其业务规模
+							的授信金额，以降低合作风险</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-bottom: 65px;">
+					<p class="title">投资标的安全</p>
+					<p class="tit">易米融平台拥有十年以上工作经验的专业风控团队，确保投资标的
+					真实可信，通过完善的回款保障措施，<br/>	让用户放心投资，安心回款。</p>
+					<div id="investment">
+						<div class="ppp">
+							<div class="pp1">
+								<img alt="" src="images1/标的真实可信.png">
+								<p>标的真实可信</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe1">易米融平台每一个投资标的，均提供公开可查询的相关法律文件信
+							息，包括《借款协议》、《债权转让协议》、抵押物信息等，确保标的
+							真实可信，无虚假</p>
+							</div>
+						</div>
+						<div class="ppp">
+							<div class="pp1">
+								<img alt="" src="images1/经营状况.png">
+								<p>企业经营状况良好</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe1">对每一家合作企业均进行全面的尽职调查，确保企业经营状况良好，
+							具备足够的资产担保和资金偿还能力</p>
+							</div>
+						</div>
+						<div class="ppp">
+							<div class="pp1">
+								<img alt="" src="images1/资产抵押.png">
+								<p>超值资产抵押</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe1">借款方提供价值远高于借款金额的实物或资产抵押，不提供纯粹的
+							信用无抵押借款</p>
+							</div>
+						</div>
+						<div class="ppp">
+							<div class="pp1">
+								<img alt="" src="images1/责任担保.png">
+								<p>无限连带责任担保</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe1">借款企业及其法人分别为借款方提供无限连带责任担保</p>
+							</div>
+						</div>
+						<div class="ppp">
+							<div class="pp1">
+								<img alt="" src="images1/无条件全额.png">
+								<p>无条件全额本息回购</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe1">借款企业及其法人签署全额本息回购协议，承诺标的到期以企业资
+							金进行无条件全额本息回购</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div style="margin-bottom: 70px;">
+					<p class="title">账户资金安全</p>
+					<p class="tit">易米融平台采用先进的互联网技术手段确保账户资金安全</p>
+					<div id="account">
+						<div class="pppp" style="margin-right: 13px;" >
+							<div class="pp1" style="height: 200px;">
+								<img alt="" src="images1/资金托管.png">
+								<p>资金托管</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe2">客户资金由第三方支付公司托管，易米融平台不触碰客户资金</p>
+							</div>
+						</div>
+						<div class="pppp" style="margin-right: 13px;">
+							<div class="pp1">
+								<img alt="" src="images1/同卡进出.png">
+								<p>同卡进出</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe2">客户赎回的投资款原路返回至购买时的银行卡，不将资金转到其他的银行卡</p>
+							</div>
+						</div>
+						<div class="pppp" style="margin-right: 13px;">
+							<div class="pp1">
+								<img alt="" src="images1/登录安全.png">
+								<p>登录安全</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe2">登录密码及手势密码控制安全</p>
+							</div>
+						</div>
+						<div class="pppp">
+							<div class="pp1">
+								<img alt="" src="images1/支付安全.png">
+								<p>支付安全</p>
+							</div>
+							<div class="pp2" style="display: none">
+								<p class="describe2">通过第三方支付进行购买前的姓名、身份证、银行预留手机号、
+							银行卡四重验证，确保支付安全</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<p class="title">信息服务安全</p>
+					<p class="tit" style="padding-bottom: 40px;">易米融作为金融信息服务居间平台，为确保给用户提供公开、
+					透明、真实、有效的金融信息</p>
+				</div>
+			</div>
+		</div>
+		<div id="intimate" style="height: 600px;">	
+			<h3>简单快捷操作</h3>	
+			<div id="wcdog">
+				<p class="title1">1、操作简单、人性化设计</p>
+				<p>易米融平台由经验丰富的互联网团队设计，操作简单快捷，设计人性化。</p>
+				<p class="title1">2、多种理财产品组合选择，总有一款适合您</p>
+				<div class="ppppp" id="wc">
+					<div class="pp1" >
+						<p class="p1">易米宝</p>
+						<p>易米宝是易米融理财根据投资人的委托，推出的灵活期限理财增值服务。
+						该服务基于对合作机构推荐的项目（包括但不限于借款项目、债权项目、
+						收益权项目、货币基金等）进行分散筛选，协助投资人将加入资金出借
+						给借款客户（及/或申购货币基金）、自动转入（及/或申购货币基金）
+						的投资计划。</p>
+					</div>
+					<div class="pp2" style="display: none">
+						<p class="p2" style="margin-top: 90px;">1&nbsp;&nbsp;投资门槛超级低：一分钟快捷注册，一元起投，门槛超低</p>
+						<p class="p2">2&nbsp;&nbsp;随存随取超方便：想存就存，想取就取，不受限制，超方便</p>
+						<p class="p2">3&nbsp;&nbsp;每日复利超划算：收益还能生收益，复利计算超划算</p>
+					</div>
+				</div>
+				<div class="ppppp" id="dq">
+					<div class="pp1" >
+						<p class="p1">定期宝</p>
+						<p>根据每个标的的期限，可分为一月、二月、三月、六月等不
+						同期限的产品，用户根据自身的资金安排，选择合适的产品。</p>
+					</div>
+					<div class="pp2" style="display: none">
+						<p class="p2" style="margin-top: 90px;">1&nbsp;&nbsp;不同产品、不同收益，多种选择</p>
+						<p class="p2">2&nbsp;&nbsp;收益每日查询，到期还本还息</p>
+					</div>
+				</div>
+			</div>
+			
+			
+		</div>
+		<div id="foot" style="margin-bottom: 60px;">
+			<h3 >我们的理念</h3>
+			<p style="margin-top: 10px;text-align: center;font-size: 20px;">易米融，安全贴心的移动理财平台</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

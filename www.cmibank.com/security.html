@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+<title>安全保障</title>
+<meta name="viewport" content="target-densitydpi=device-dpi;width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+<meta name="description" content="易米融平台是由万米财富管理有限公司推出的一款安全、方便、高收益的金融信息服务平台。以用户的资金安全为第一准则，为用户精心推荐安全性高，收益适中的理财产品。通过卓越的运营管理团队，严格的风控措施，多重资金安全保障服务，让用户能够放心理财，投资无忧" />
+<meta name="keywords" content="易米融 移动理财 安全理财 理财 高收益" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+	*{
+		list-style: none;
+		text-decoration: none;
+		margin: 0 auto;
+		font-family:"微软雅黑";
+	}
+	a{
+		color:#000000;
+	}
+	.top_menu{
+		width: 60%;
+		height:126px;
+		max-width: 1920px;
+		min-width: 900px;
+		top:20px;
+	}
+	.nav{
+		width: 100%;
+		height: 20px;
+		max-width: 1920px;
+		min-width: 900px;
+		font-size: 12px;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		color: #666666;
+	}
+	.nav .qq{
+		vertical-align: middle;
+	}
+	.nav .app_phone {
+		font-size: 12px;
+		color: #666666;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		position:relative;
+		vertical-align: middle;
+	}
+	.app_phone:hover{
+		color: red;
+		cursor: pointer;
+		text-decoration:underline;
+	}
+
+	.nav .app_phone .download_img{
+		position: absolute;
+		vertical-align: middle;
+		display: none;
+		border: 1px solid #e5e5e5;
+		width: 400px;
+		height: 200px;
+		background: #ffffff;
+		right: -1px;
+		top: 18px;
+		z-index: 1000;
+	}
+	.app_phone:hover .download_img{
+		display:inline-block;
+	}
+	.download_img .floatL{
+		width: 130px;
+		float: left;
+		margin: 20px 0px 0px 55px;
+	}
+	.download_img .floatR{
+		width: 130px;
+		float: right;
+		margin: 20px 55px 0px 0px;
+	}
+	.common_qrcode_org{
+		width: 130px;
+		height: 130px;
+	}
+	.fontSet{
+		width:130px;
+		height: 130px;
+		line-height: 36px;
+		color: #1aac19;
+		font-size: 14px;
+	}
+	.nav div{
+		float: right;
+	}
+	.navUl li{
+		float: left;
+		line-height:80px;
+		font-size:18px;
+	}
+	.navUl li:hover{
+		border-bottom:4px solid #fd5a5a;
+	}
+
+	a:active{
+		color:#bf5959;
+	}
+	.logo{
+		float: left;
+	}
+	.navUl{
+		float: left;
+	}
+	.navul1{
+		margin-right:46px;
+	}
+	#Gradient{
+		width: 100%;
+		height: 20px;
+		background-image: url('images/导航20.png') ;
+		max-width: 1920px;
+		min-width: 900px;
+	}
+	
+	.banner{
+		width: 100%;
+		height: 420px;
+		max-width: 1920px;
+		min-width: 900px;
+	}
+	.banner li{
+		float: left;
+	}
+	#imgs{
+		position:relative;
+		height:420px;
+		left:-1%;
+		
+		overflow:hidden;
+	}
+	#imgs li{
+		width:100%;
+		height:100%;
+	}
+	#numbers ul{
+		height:35px;
+		width: 250px;
+		padding-left:25px;
+		//background-image: url('images/圆角矩形-1.png');
+		position: relative;
+		top:-40px;
+		background-size：cover;
+	}
+	.num{
+		height: 12px;
+		width:34px;
+		margin-right:5px;
+		background-image: url('images/圆角矩形-2.png');
+		margin-top: 9px;
+	}
+	
+	
+	
+	#index_iconBox2{
+		width: 1024px;
+		height:3100px;
+		margin-top: 20px;
+		
+	}
+	
+	h3{
+		border-bottom: 1px solid lightgrey;
+		text-align: center;
+		margin-top: 30px;
+		padding-top:30px;
+		padding-bottom: 30px;
+	}
+	
+
+	.p1{
+		width: 1030px;
+		text-align: center;
+		font-size: 14px;
+		color: #000000;
+		height: 30px;
+		margin-bottom: 54px;
+		line-height: 150%;
+		margin-top: 10px;
+	}
+	.business{
+		float: left;
+		background-image: url('images/红色.png');
+		height: 370px;
+		width: 306px;
+		text-align: center;
+		color: #ffffff;
+		
+	}
+	.business1{
+		height: 170px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	#business{
+		width: 1030px;
+		text-align: center;
+		height: 550px;
+	}
+	
+	.p2{
+		font-size: 20px;
+	}
+	.p3{
+		font-size: 12px;
+		margin-left: 32px;
+		margin-right: 32px;
+		text-align: left;
+		line-height: 200%;
+	}
+	.bus{
+		width: 1024px;
+		height: 740px;
+	}
+	.bu{
+		width: 1030px;
+		float: left;
+
+	}
+	.index_iconBox4{
+		width: 60%;
+		height:260px;
+		max-width: 1920px;
+		min-width: 100px;
+		
+	}
+	#index_iconBox5{
+		width: 60%;
+		height:100px;
+		padding-top:20px;
+		padding-bottom:5px;
+		border-bottom:4px solid lightgrey;
+		max-width: 1920px;
+		min-width: 10px;
+	}
+	#foot{
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		max-width: 1000px;
+		min-width: 10px;
+	}
+	.code{
+		float: left;
+		font-size:12px;
+	}
+	#index_iconBox6{
+		width: 80%;
+		height:80px;
+		padding-top:3px;
+		text-align:center;
+		font-size:12px;
+		color:#808080;
+	}
+	.img5{
+		width:20%;
+		height:62px;
+		text-align:right;
+		margin-top:16px;
+		font-size:12px;
+	}
+	#showimg{
+	
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	#showimg1{
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	.number_over{
+		background-image: url('images/圆角矩形_白色.png');
+	}
+	.view{
+		border-bottom:4px solid #fd5a5a;
+	}
+	span{
+		font-size: 14px;
+	}
+	.border_line{
+		width: 100%;
+		border-bottom: 1px solid #ebebeb;
+	}
+</style>
+<script type="text/javascript">
+	function turnPics() {
+    	var index = 0; //当前播放图片索引
+    	var stop = false; //控制自动、手动的切换
+    	var $li = $(".banner").find("#imgs li"); //镶套所有轮播图片的li
+   		var $pageIndex = $(".banner").find("#numbers li"); //显示所有编号的li
+    	$pageIndex.eq(index).addClass("number_over")
+        	.stop(true, true)//清空动画序列
+        	.siblings()//兄弟元素
+        	.removeClass("number_over");
+        $li.mouseover(function () {
+            stop = true; //鼠标停止在图片上面，停止轮换图片。
+        });
+        $li.mouseout(function () {
+            stop = false; //鼠标移出，开始自动轮换图片。
+        });
+        setInterval(function() { //自动播放
+        	if (stop) {
+        		return; 
+        	}
+        	index++;
+         	if (index >= $li.length) {
+         		index = 0; //从头播放
+         	}
+        	$li.eq(index)
+            	.stop(true, true)
+            	.fadeIn("slow")
+            	.siblings().fadeOut("slow");
+            $pageIndex.eq(index)
+            	.addClass("number_over")
+            	.stop(true, true)
+            	.siblings()
+            	.removeClass("number_over");
+		}, 3000);
+        $pageIndex.mouseover(function () { //控制手动播放
+        	stop = true; //自动轮转结束
+        	index = $pageIndex.index($(this)); //当前的编号
+        	$li.eq(index).stop(true, true)
+            	.fadeIn("slow")//当前编号图片显示
+            	.siblings()
+            	.fadeOut("slow"); //其他的图片隐藏
+            $(this).addClass("number_over")
+            	.stop(true, true)
+            	.siblings()
+            	.removeClass("number_over");
+        	}).mouseout(function () {
+                stop = false;
+        });
+	}
+   
+	$(function () {
+		turnPics(); 
+		var $view = $(".navUl").find("ul li"); //显示所有编号的li
+    	$view.eq(1).addClass("view");
+	});
+	
+	
+	
+	function showimg(){
+		$("#showimg").css("display","")
+	}
+	function showimg1(){
+		$("#showimg1").css("display","")
+	}
+	function showimg3(){
+		$("#showimg").css("display","none")
+	}
+	function showimg4(){
+		$("#showimg1").css("display","none")
+	}
+</script>
+</head>
+<body>
+	<div class="top_menu" style="margin-top: 10px;">
+		<div class="nav" style="width: 100%;">
+			<div style="width: 80%;float: left">
+				<img class="phone" src="images/kefu_shouye.png">
+				<span style="font-size: 12px; color: red;padding: 0px">客服热线：400-080-5611</span><span style="font-size: 12px;">（服务时间8：00-20：00）</span>
+			</div>
+			<div style="width:20%;text-align: center">
+				<img class="qq" src="images/qq_shouye.png">
+				<span style="font-size: 12px;">QQ群：198595909</span>
+				<div class="app_phone">
+					<span style="font-size: 12px;float: right">手机APP</span>
+					<div class="download_img">
+						<div class="floatL">
+							<div><img class="common_qrcode_org" src="images/download_android_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=2">Android下载</a></span>
+						</div>
+						<div class="floatR">
+							<div><img class="common_qrcode_org" src="images/down_load_iphone_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=1">Iphone下载</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border_line"></div>
+			<div style="width: 100%;height: 20px"></div>
+		</div>
+	    <div class="box" style="width: 100%;height: 100px;max-width: 1920px;min-width: 100px;">
+	        <div class="navUl" style="width:20%;max-width: 1920px;min-width: 100px">
+	            <img src="images/logo.png"/>
+	        </div>
+			<div class="navUl" style="width:60%;max-width: 1920px;padding-left:100px;min-width: 100px;float: right">
+		        <ul >
+		            <li id="myhome" class="navul1"><a href="index.html">首页</a></li>
+		            <li id="myInvestment" class="navul1">
+		                <a href="security.html">安全保障</a>
+		            </li>
+		            <li id="scoreMall" class="navul1"><a href="product.html">理财产品</a></li>
+		            <li id="aboutUs" ><a href="understand.html">关于我们</a></li>
+		        </ul>
+	    	</div>
+	    </div>
+	</div>
+	<div id="Gradient" >
+	</div>
+	<div class="banner">
+	    <ul id="imgs">
+			<li style="background:url('images/double11.png') no-repeat center center;"></li>
+			<li style="	background:url('images/wanmi2.png') no-repeat center center;"></li>
+	    </ul>
+	    <div id="numbers">
+		    <ul  style="background-size:cover">
+				<li class="num"></li>
+				<li class="num"></li>
+		    </ul> 
+	    </div>        
+	</div>
+	
+	
+	
+	<div id="index_iconBox2">
+
+		<div id="business">
+			<h3>业务模式安全</h3>
+			<div class="p1">
+				<p >易米融平台采用安全性更高的P2B模式，同时秉承“不要把所有的鸡蛋放在一个篮子里”的风<br/>险投资理念，采取分散投资，谨慎授信的模式提升投资安全性。</p>
+			</div>
+			<div>
+				<div class="bu" id="bu1">
+					<div class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/安全.png"/>
+							<p class="p2">安全性更高的P2B模式</p>
+						</div>
+						<div >
+							<p class="p3">借款人均为企业，借款企业提供物品或资产抵押作为控制风险的方式，同时借款企业及其法人（或实际控股的大股东）分别提供企业担保及个人担保，不提供纯粹的信用无抵押借款，安全性大大提高</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/分散投资.png"/>
+							<p class="p2">分散投资</p>
+						</div>
+						<div>
+							<p class="p3">易米融平台目前已经和多家金融机构或企业进行合作，且合作企业数量在持续增加中</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 0px;">
+						<div class="business1">
+							<img src="images/谨慎授信.png"/>
+							<p class="p2">谨慎授信</p>
+						</div>
+						<div>
+							<p class="p3">根据每家合作金融机构及企业的业务规模，提供远低于其业务规模的授信金额，以降低合作风险</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="investment" style="margin-top: 50px;">
+			<h3>投资标的安全</h3>
+			<div class="p1" style="margin-left: 0px;" >
+				<p >易米融平台拥有十年以上工作经验的专业风控团队，确保投资标的真实可信，通过完善的回款<br/>保障措施，让用户放心投资，安心回款。 </p>
+			</div>
+			<div  class="bus" >
+				<div class="bu">
+					<div  class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/标的真实可信.png"/>
+							<p class="p2">标的真实可信</p>
+						</div>
+						<div >
+							<p class="p3">易米融平台每一个投资标的，均提供公开可查询的相关法律文件信息，包括《借款协议》、《债权转让协议》、抵押物信息等，确保标的真实可信，无虚假</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/经营状况.png"/>
+							<p class="p2">企业经营状况良好</p>
+						</div>
+						<div>
+							<p class="p3">对每一家合作企业均进行全面的尽职调查，确保企业经营状况良好，具备足够的资产担保和资金偿还能力</p>
+						</div>
+					</div>
+					<div class="business">
+						<div class="business1">
+							<img src="images/超值资产抵押.png"/>
+							<p class="p2">超值资产抵押</p>
+						</div>
+						<div>
+							<p class="p3">借款方提供价值远高于借款金额的实物或资产抵押，不提供纯粹的信用无抵押借款</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/无限连带责任担保.png"/>
+							<p class="p2">无限连带责任担保</p>
+						</div>
+						<div>
+							<p class="p3">借款企业及其法人分别为借款方提供无限连带责任担保</p>
+						</div>
+					</div>
+					<div class="business">
+						<div class="business1">
+							<img src="images/无条件全额.png"/>
+							<p class="p2">无条件全额本息回购</p>
+						</div>
+						<div>
+							<p class="p3">借款企业及其法人签署全额本息回购协议，承诺标的到期以企业资金进行无条件全额本息回购</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="account">
+			<h3>账户资金安全</h3>
+			<div class="p1">
+				<p >易米融平台采用先进的互联网技术手段确保账户资金安全</p>
+			</div>
+			<div  class="bus" >
+				
+				<div  class="bu">
+					<div  class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/资金托管.png"/>
+							<p class="p2">资金托管</p>
+						</div>
+						<div >
+							<p class="p3">客户资金由第三方支付公司托管服务，易米融平台不触碰客户资金；</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 56px;">
+						<div class="business1">
+							<img src="images/同卡进出.png"/>
+							<p class="p2">同卡进出</p>
+						</div>
+						<div>
+							<p class="p3">客户赎回的投资款原路返回至购买时的银行卡，不将资金转到其他银行卡</p>
+						</div>
+					</div>
+					<div class="business" style="margin-right: 0px;">
+						<div class="business1">
+							<img src="images/登录安全.png"/>
+							<p class="p2">登录安全</p>
+						</div>
+						<div >
+							<p class="p3" style="text-align: center;">登录密码及手势密码控制安全</p>
+						</div>
+					</div>
+					<div class="business">
+						<div class="business1">
+							<img src="images/支付安全.png"/>
+							<p class="p2">支付安全</p>
+						</div>
+						<div>
+							<p class="p3">通过第三方支付进行购买前的姓名、身份证、银行预留手机号、银行卡四重验证，确保支付安全</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="information" style="margin-top:69px;">
+		<h3 style="margin-bottom: 50px;">信息服务安全</h3>
+			<div id="in" style="width: 1024px;height: 415px;background-color: #f95f64">
+				
+					<img style="float:left" src="images/组-29.png">
+				
+				
+					<p style="float:left;width:469px;padding-top:160px; line-height:150%;  padding-left:66px;padding-right:66px;font-size: 16px;color: #fefefe">易米融作为金融信息服务居间平台，为确保给用户提供公开、透明、真实、有效的金融信息，</p>
+				
+			</div>
+		</div>
+		
+	</div>
+	<div style="width: 100%;background-color: #ebebeb;">
+	<div class="index_iconBox4" style="max-width: 1920px;padding-bottom:20px;margin-bottom:30px;border-bottom:1px solid lightgrey;min-width: 900px;height:360px;" >
+		<div style="width: 62%;margin-left:2%;float: left;">
+			<h1 style="font-weight: 500;margin-top:50px;">易米融理财——安全的移动理财平台</h1>
+		</div>
+		<div >
+			<img style="height:360px;" src="images1/wangzhi.png"/>
+		</div>
+	</div>
+		<div style="height: 50px;background: #ebebeb;text-align: center" >
+			<a style="margin-left:20px;font-size: 18px;line-height: 50px;color: #000000" href="http://www.wdzj.com" target="_bank">网贷之家</a>
+			<a style="margin-left:20px;font-size: 18px;line-height: 50px;color: #000000" href="http://bbs.wangdaiguancha.com" target="_bank">网贷观察网</a>
+		</div>
+		<div id="index_iconBox5" style="max-width: 1920px;min-width: 900px;"style="font-size:14px;">
+			<div style="height:50px;padding-bottom:10px;max-width: 1920px;min-width: 900px;">
+				<div id="foot">
+					<span style="margin-right: 20px;">QQ群：<font color="#fd5a5a">198595909</font></span><br/>
+					<span style="margin-right: 20px;">全国统一客服电话：（工作日9：00-18：00）<font color="#fd5a5a">400-080-5611</font></span><br/>
+					<span style="padding-right: 20px">上海市黄浦区延安东路700号港泰广场1401-1402</span>
+					<div style="text-align:center;color: #999999;font-size: 12px;margin-top: 20px">温馨提示：市场有风险 投资虚谨慎</div>
+				</div>
+			</div>
+		</div>
+	<div id="index_iconBox6">
+		<p>Copyright&copy;万米财富管理有限公司All Rights Reserved</p>
+	</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

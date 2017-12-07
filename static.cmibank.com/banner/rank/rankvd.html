@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="format-detection" telephone="no">
+<title>投资定期送大礼</title>
+<link rel="stylesheet" href="http://static1.cmibank.com/banner/rank/static/jyb.css">
+<script type="text/javascript" src="http://static1.cmibank.com/js/jquery-easyui/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready( function () {
+function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+	var uid = getUrlParam('uid');
+	if(uid == null){
+		$('#aa001').css('display','none');
+		$('#aa002').css('display','none');
+	}
+	
+    $.ajax({
+    url: 'https://api.cmibank.com/activity_rank/getMyRank?uid='+uid,
+    dataType: 'JSONP',
+    jsonp: 'callback', 
+    jsonpCallback:'callback',
+    timeout: 0,
+    error: function(){
+     alert('亲！网络不给力哦。请到网络好的地方试试');
+    },
+    success: function(data){
+		if(data.rank.score>= 5000){
+			$('<p style="font-size:16px; color:#717171;line-height:19px;text-align:left;padding-left:5%;">您目前的总积分为<font id="jifen2">'+data.rank.score+'</font>,总排名第<font id="paiming2">'+data.rank.rank+'</font>名</p>').appendTo("#chakan1");
+		}else if(data.rank.score <5000 && data.rank.score !=0){
+			$('<p style="font-size:16px; color:#717171;line-height:19px;text-align:left;padding-left:5%;">您目前的总积分为<font id="jifen2">'+data.rank.score+'</font>,总排名第<font id="paiming2">'+data.rank.rank+'</font>名</p>').appendTo("#chakan1");
+		}else if(data.rank.score == 0){
+			$('<p style="font-size:16px; color:#717171;line-height:19px;text-align:left;padding-left:5%;">啊哦，您暂时没有积分哦，赶快去投资定期赚积分吧！</p>').appendTo("#chakan1");
+		}
+
+		
+		//data.rank.score总积分
+		//data.rank.rank 总排名
+		
+		//data.weekrank.score周积分
+		//data.weekrank.rank 周排名
+    }
+ 
+});
+
+window.onload=function(){
+   $.ajax({
+    url: 'https://api.cmibank.com/activity_rank/getRank',
+    type: 'GET',
+    dataType: 'JSONP',
+    jsonp: 'callback', 
+    jsonpCallback:'callback',
+    timeout: 0,
+    error: function(){
+     alert('亲！网络不给力哦。请到网络好的地方试试');
+    },
+    success: function(data){
+		var i=1;
+		for(var key in data){ 
+		  if(i<=5){
+		   $("#suoyou").append('<tr><td class="no'+i+'"></td><td>'+key+'</td><td>'+data[key]+'</td></tr>');
+		  }else{
+			$("#suoyou").append('<tr><td class="no'+i+'">'+i+'</td><td>'+key+'</td><td>'+data[key]+'</td></tr>');
+		  }
+		  i++;
+		} 
+         $.ajax({
+    	url: 'https://api.cmibank.com/activity_rank/getWeekRank',
+    	type: 'GET',
+    	dataType: 'JSONP',
+    	jsonp: 'callback', 
+    	jsonpCallback:'callback',
+    	timeout: 0,
+    	error: function(){
+     	alert('亲！网络不给力哦。请到网络好的地方试试');
+    	},
+   	 	success: function(data){
+			var i=1;
+			for(var key in data){ 
+		  		if(i<=5){
+		   			$("#suoyou2").append('<tr><td class="no'+i+'"></td><td>'+key+'</td><td>'+data[key]+'</td></tr>');
+		  		}else{
+					$("#suoyou2").append('<tr><td class="no'+i+'">'+i+'</td><td>'+key+'</td><td>'+data[key]+'</td></tr>');
+		  		}
+		  		i++;
+			}  
+        
+    	}
+    	});
+    }
+    });
+}
+
+
+
+$('#btn1').click ( function () {
+	$("#list_top10").height(1800);
+	$("#btn1").css('display','none');
+});
+
+$('#btn1_2').click ( function () {
+	$("#list_top10_2").height(600);
+	$("#btn1_2").css('display','none');
+});
+
+})
+
+
+</script>
+
+<body style="background-color:#FF0031">
+<div class="head"><img src="http://static1.cmibank.com/banner/rank/static/jifen01.jpg"></div>
+
+<div><p class="daojishi2">活动已结束</p></div> 
+	
+<div class="hdjp">
+    <ul id="aa002">
+	  <div class="chakan1" id="chakan1" style="height:100px;">
+	  </div>
+    </ul>	
+</div>
+  <div id="xian" style="text-align:center;padding-top:50px"><img src="http://static1.cmibank.com/banner/rank/static/jifen04.png"></div>
+  <div class="bangdan">
+    <div class="jifen">
+      <ul style="background-color:white">
+        <li class="jifen_li1" style="color:#db1470">排名</li>
+        <li class="jifen_li2" style="color:#db1470">手机号</li>
+        <li class="jifen_li3" style="color:#db1470">累计积分</li>
+      </ul>
+    </div>
+    <div class="list_top10" id="list_top10">
+		<table id="suoyou">
+
+		</table>
+	</div>
+	<button id="btn1"><img src="http://static1.cmibank.com/banner/rank/static/s.png">加载更多</button>
+<div id="xian"><img src="http://static1.cmibank.com/banner/rank/static/jifen02.jpg" width="100%"><img src="http://static1.cmibank.com/banner/rank/static/jifen03.jpg" width="100%"></div>
+</body></html>

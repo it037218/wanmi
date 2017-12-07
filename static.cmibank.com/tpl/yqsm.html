@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <title>邀请说明</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<script>
+//$(document).ready(function(){
+    var start_time = '2017-11-09 00:00:00';
+    var end_time = '2017-12-21 23:00:00';
+    /**
+     *获取当前时间
+     * @param  {[type]} s [description]
+     * @return {[type]}   [description]
+     */
+    function p(s) {
+        return s < 10 ? '0' + s: s;
+    }
+
+    var myDate = new Date();
+    //获取当前年
+    var year=myDate.getFullYear();
+    //获取当前月
+    var month=myDate.getMonth()+1;
+    //获取当前日
+    var date=myDate.getDate(); 
+    var h=myDate.getHours();       //获取当前小时数(0-23)
+    var m=myDate.getMinutes();     //获取当前分钟数(0-59)
+    var s=myDate.getSeconds();  
+
+    var now=year+'-'+p(month)+"-"+p(date)+" "+p(h)+':'+p(m)+":"+p(s);
+
+    if(now>=start_time && now<=end_time){
+
+//        window.location.href = "http://api.cmibank.com/invite_page/activity_note";
+
+    }
+//});
+</script>
+</head>
+<body style="height:100%;">
+<!--<div id="body">-->
+<!--<ul>-->
+    <!--<li><img src="http://static1.cmibank.com/images/yqsm.jpg" id="old_img" /></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</body>-->
+
+    <iframe frameborder="0" scrolling="0" src="http://api.cmibank.com/invite_page/activity_note" style="height:100%;width:100%;"></iframe>
+<!--<div id="body">
+<ul>
+    <li><img src="http://static1.cmibank.com/images/yqsm.jpg" id="old_img" /></li>
+</ul>
+</div>-->
+
+</body>
+
+</html>

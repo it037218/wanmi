@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"/>
+<title>理财产品</title>
+<meta name="viewport" content="target-densitydpi=device-dpi;width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+<meta name="description" content="易米融平台是由万米财富管理有限公司推出的一款安全、方便、高收益的金融信息服务平台。以用户的资金安全为第一准则，为用户精心推荐安全性高，收益适中的理财产品。通过卓越的运营管理团队，严格的风控措施，多重资金安全保障服务，让用户能够放心理财，投资无忧" />
+<meta name="keywords" content="易米融 移动理财 安全理财 理财 高收益" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<style type="text/css">
+	*{
+		list-style: none;
+		text-decoration: none;
+		margin: 0 auto;
+		font-family:"微软雅黑";
+	}
+	a{
+		color:#000000;
+	}
+	.top_menu{
+		width: 60%;
+		height:126px;
+		max-width: 1920px;
+		min-width: 900px;
+		top:20px;
+	}
+	.nav{
+		width: 100%;
+		height: 20px;
+		max-width: 1920px;
+		min-width: 900px;
+		font-size: 12px;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		color: #666666;
+	}
+	.nav .qq{
+		vertical-align: middle;
+	}
+	.nav .app_phone {
+		font-size: 12px;
+		color: #666666;
+		font-family: Arial,Helvetica,sans-serif,"新宋体";
+		position:relative;
+		vertical-align: middle;
+	}
+	.app_phone:hover{
+		color: red;
+		cursor: pointer;
+		text-decoration:underline;
+	}
+
+	.nav .app_phone .download_img{
+		position: absolute;
+		vertical-align: middle;
+		display: none;
+		border: 1px solid #e5e5e5;
+		width: 400px;
+		height: 200px;
+		background: #ffffff;
+		right: -1px;
+		top: 18px;
+		z-index: 1000;
+	}
+	.app_phone:hover .download_img{
+		display:inline-block;
+	}
+	.download_img .floatL{
+		width: 130px;
+		float: left;
+		margin: 20px 0px 0px 55px;
+	}
+	.download_img .floatR{
+		width: 130px;
+		float: right;
+		margin: 20px 55px 0px 0px;
+	}
+	.common_qrcode_org{
+		width: 130px;
+		height: 130px;
+	}
+	.fontSet{
+		width:130px;
+		height: 130px;
+		line-height: 36px;
+		color: #1aac19;
+		font-size: 14px;
+	}
+	.nav div{
+		float: right;
+	}
+	.navUl li{
+		float: left;
+		line-height:80px;
+		font-size:18px;
+	}
+	.navUl li:hover{
+		border-bottom:4px solid #fd5a5a;
+	}
+
+	a:active{
+		color:#bf5959;
+	}
+	.logo{
+		float: left;
+	}
+	.navUl{
+		float: left;
+	}
+	.navul1{
+		margin-right:46px;
+	}
+	#Gradient{
+		width: 100%;
+		height: 20px;
+		background-image: url('images/导航20.png') ;
+		max-width: 1920px;
+		min-width: 900px;
+	}
+	
+	.banner{
+		width: 99%;
+		height: 420px;
+		max-width: 1920px;
+		min-width: 900px;
+	}
+	.banner li{
+		float: left;
+	}
+	/**.banner li img{
+		width:1920px;
+	}*/
+	#imgs{
+		position:relative;
+		left:-1%;
+		height:420px;
+		
+		overflow:hidden;
+	}
+	#imgs li{
+		width:100%;
+		height:100%;
+	}
+	#numbers ul{
+		height:35px;
+		width: 250px;
+		padding-left:25px;
+		//background-image: url('images/圆角矩形-1.png');
+		position: relative;
+		top:-40px;
+		background-size：cover;
+	}
+	.num{
+		height: 12px;
+		width:34px;
+		margin-right:5px;
+		background-image: url('images/圆角矩形-2.png');
+		margin-top: 9px;
+	}
+	
+	#index_iconBox3{
+		width: 1030px;
+		height: 1100px;
+		
+	}
+	h3{
+		border-bottom: 1px solid lightgrey;
+		text-align: center;
+		padding-top:30px;
+		padding-bottom:30px;
+		margin-top:30px;
+	}
+	
+	#index_iconBox3 ul{
+		padding-left:345px;
+		padding-right:342px;
+		height:42px;
+	}
+	#index_iconBox3 ul li{
+		float: left;
+		width: 140px;
+		height: 42px;
+		font-size: 14px;
+		text-align: center;
+		line-height: 42px;
+	}
+	#current{
+		
+		padding-top:50px;
+		padding-bottom:26px;
+		border-bottom:1px solid lightgrey;
+		color: #ffffff;
+	}
+	#current li{
+		background-image: url('images/圆角矩形_灰色.png');
+	}
+	.wangcai{
+		float: left;
+		width: 306px;
+		height: 296px;
+		text-align: center;
+		background-image: url('images/白色矩形.png');
+		margin-bottom: 68px;
+	}
+	.wangcai img{
+		margin: 36px 0 20PX;;
+	}
+	.p4{
+		font-size: 18px;
+	}
+	.p5{
+		margin:30px 0 46px;
+		font-size: 12px;
+	}
+	.current1{
+		float: left;
+		width: 488px;
+		height: 286px;
+		text-align: center;
+		background-image: url('images/白色宽矩形.png');
+		margin-bottom: 68px;
+		
+		
+	}
+	.current1 img{
+		float: left;
+		margin-top:78px;
+		margin-left:72px;
+	}
+	.current1 p{
+		float: left;
+		margin-right:0px;
+		font-size:18px;
+		margin-left:50px;
+		text-align:left;
+		margin-top:121px;
+	}
+	
+	.index_iconBox4{
+		width: 60%;
+		height:260px;
+		max-width: 1920px;
+		min-width: 100px;
+		
+	}
+	#index_iconBox4{
+		width: 1024px;
+		height:260px;
+	}
+	span{
+		font-size: 14px;
+	}
+	#index_iconBox5{
+		width: 60%;
+		height:100px;
+		padding-top:20px;
+		padding-bottom:5px;
+		border-bottom:4px solid lightgrey;
+		max-width: 1920px;
+		min-width: 10px;
+	}
+	#foot{
+		text-align: center;
+		width: 100%;
+		height: 100px;
+		max-width: 1000px;
+		min-width: 10px;
+	}
+	.code{
+		float: left;
+		font-size:12px;
+	}
+	#index_iconBox6{
+		width: 80%;
+		height:80px;
+		padding-top:3px;
+		text-align:center;
+		font-size:12px;
+		color:#808080;
+	}
+	.img5{
+		width:20%;
+		height:62px;
+		text-align:right;
+		margin-top:16px;
+		font-size:12px;
+	}
+	#showimg{
+	
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	#showimg1{
+		position:relative;
+		top:-70px;
+		cursor: none;
+	}
+	.number_over{
+		background-image: url('images/圆角矩形_白色.png');
+	}
+	.view{
+		border-bottom:4px solid #fd5a5a;
+	}
+	.border_line{
+		width: 100%;
+		border-bottom: 1px solid #ebebeb;
+	}
+</style>
+<script type="text/javascript">
+	function turnPics() {
+    	var index = 0; //当前播放图片索引
+    	var stop = false; //控制自动、手动的切换
+    	var $li = $(".banner").find("#imgs li"); //镶套所有轮播图片的li
+   		var $pageIndex = $(".banner").find("#numbers li"); //显示所有编号的li
+    	$pageIndex.eq(index).addClass("number_over")
+        	.stop(true, true)//清空动画序列
+        	.siblings()//兄弟元素
+        	.removeClass("number_over");
+        $li.mouseover(function () {
+            stop = true; //鼠标停止在图片上面，停止轮换图片。
+        });
+        $li.mouseout(function () {
+            stop = false; //鼠标移出，开始自动轮换图片。
+        });
+        setInterval(function() { //自动播放
+        	if (stop) {
+        		return; 
+        	}
+        	index++;
+         	if (index >= $li.length) {
+         		index = 0; //从头播放
+         	}
+        	$li.eq(index)
+            	.stop(true, true)
+            	.fadeIn("slow")
+            	.siblings().fadeOut("slow");
+            $pageIndex.eq(index)
+            	.addClass("number_over")
+            	.stop(true, true)
+            	.siblings()
+            	.removeClass("number_over");
+		}, 3000);
+        $pageIndex.mouseover(function () { //控制手动播放
+        	stop = true; //自动轮转结束
+        	index = $pageIndex.index($(this)); //当前的编号
+        	$li.eq(index).stop(true, true)
+            	.fadeIn("slow")//当前编号图片显示
+            	.siblings()
+            	.fadeOut("slow"); //其他的图片隐藏
+            $(this).addClass("number_over")
+            	.stop(true, true)
+            	.siblings()
+            	.removeClass("number_over");
+        	}).mouseout(function () {
+                stop = false;
+        });
+	}
+   
+	$(function () {
+		turnPics();
+		var $view = $(".navUl").find("ul li"); //显示所有编号的li
+    	$view.eq(2).addClass("view");
+	});
+
+	function showimg(){
+		$("#showimg").css("display","")
+	}
+	function showimg1(){
+		$("#showimg1").css("display","")
+	}
+	function showimg3(){
+		$("#showimg").css("display","none")
+	}
+	function showimg4(){
+		$("#showimg1").css("display","none")
+	}
+
+</script>
+</head>
+<body>
+
+	<div class="top_menu" style="margin-top: 10px;">
+		<div class="nav" style="width: 100%;">
+			<div style="width: 80%;float: left">
+				<img class="phone" src="images/kefu_shouye.png">
+				<span style="font-size: 12px; color: red;padding: 0px">客服热线：400-080-5611</span><span style="font-size: 12px;">（服务时间8：00-20：00）</span>
+			</div>
+			<div style="width:20%;text-align: center">
+				<img class="qq" src="images/qq_shouye.png">
+				<span style="font-size: 12px;">QQ群：198595909</span>
+				<div class="app_phone">
+					<span style="font-size: 12px;float: right">手机APP</span>
+					<div class="download_img">
+						<div class="floatL">
+							<div><img class="common_qrcode_org" src="images/download_android_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=2">Android下载</a></span>
+						</div>
+						<div class="floatR">
+							<div><img class="common_qrcode_org" src="images/down_load_iphone_img.png"></div>
+							<span class="fontSet"><a href="http://www.cmibank.com/download?type=1">Iphone下载</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border_line"></div>
+			<div style="width: 100%;height: 20px"></div>
+		</div>
+	    <div class="box" style="width: 100%;height: 100px;max-width: 1920px;min-width: 100px;">
+	        <div class="navUl" style="width:20%;max-width: 1920px;min-width: 100px">
+	            <img src="images/logo.png"/>
+	        </div>
+			<div class="navUl" style="width:60%;max-width: 1920px;padding-left:100px;min-width: 100px;float: right">
+		        <ul >
+		            <li id="myhome" class="navul1"><a href="index.html">首页</a></li>
+		            <li id="myInvestment" class="navul1">
+		                <a href="security.html">安全保障</a>
+		            </li>
+		            <li id="scoreMall" class="navul1"><a href="product.html">理财产品</a></li>
+		            <li id="aboutUs" ><a href="understand.html">关于我们</a></li>
+		        </ul>
+	    	</div>
+	    </div>
+	</div>
+	<div id="Gradient" >
+	</div>
+	<div class="banner">
+	    <ul id="imgs">
+			<li style="background:url('images/double11.png') no-repeat center center;"></li>
+			<li style="background:url('images/wanmi2.png') no-repeat center center;"></li>
+	    </ul>
+	    <div id="numbers">
+		    <ul  style="background-size:cover">
+				<li class="num"></li>
+				<li class="num"></li>
+		    </ul> 
+	    </div>        
+	</div>
+	
+	<div style="width:100%;max-width:1920px;min-width:500px;background-color: #ebebeb;margin-top:-30px">
+		<div id="index_iconBox3" >
+				<div id="wangcaibao">
+					<h3>易米宝</h3>
+					<div>
+						<p style="margin:30px 0 44px;font-size:14px; padding:0 100px;text-align: center;line-height: 190%">易米宝是易米融理财根据投资人的委托，推出的灵活期限理财增值服务。该服务基于对合作机构推荐的项目（包括但不限于借款项目、债权项目、收益权项目、货币基金等）进行分散筛选，协助投资人将加入资金出借给借款客户（及/或申购货币基金）、自动转入（及/或申购货币基金）的投资计划。</p>
+					</div>
+					<div>
+						<div class="wangcai" style="margin-right: 56px;">
+							<img src="images/投资门槛超级低.png"/>
+							<p class="p4">投资门槛超级低</p>
+							<p class="p5">一分钟快捷注册，一元起投，门槛超低</p>
+						</div>
+						<div class="wangcai" style="margin-right: 56px;">
+							<img src="images/随存随取超方便.png"/>
+							<p class="p4">随存随取超方便</p>
+							<p class="p5">想存就存，想取就取，不受限制，超方便</p>
+						</div>
+						<div class="wangcai">
+							<img src="images/每日复利超划算.png"/>
+							<p class="p4">收益还能生收益</p>
+							<p class="p5">复利计算超划算</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="dingqibao" >
+					<h3>定期宝</h3>
+					<div>
+						<p style="margin:30px 0 60px;padding:0 100px;text-align: center;font-size:14px;">根据每个标的的期限，可分为一月、二月、三月、六月等不同期限的产品，用户根据自身的资金安排，选择合适的产品。</p>
+					</div>
+					<div>
+						<div class="current1" style="margin-right: 54px;">
+							<img src="images/不同产品.png"/>
+							<p>不同产品、不同收益，<br/>多种选择</p>
+						</div>
+						<div class="current1">
+							<img src="images/收益每日查询.png"/>
+							<p>收益每日查询<br/>到期还本还息</p>
+						</div>
+					</div>
+				</div>
+				
+				
+		</div>
+	</div>
+	
+	<div class="index_iconBox4" style="max-width: 1920px;padding-bottom:40px;margin-bottom:30px;border-bottom:1px solid lightgrey;min-width: 900px;height:360px;" >
+		<div style="width: 62%;margin-left:2%;float: left;">
+			<h1 style="font-weight: 500;margin-top:50px;">易米融理财——安全的移动理财平台</h1>
+			
+		</div>
+		<div >
+			<img style="height:360px;" src="images1/wangzhi.png"/>
+		</div>
+	</div>
+	<div style="height: 50px;background: #ebebeb;text-align: center" >
+		<a style="margin-left:20px;font-size: 18px;line-height: 50px;color: #000000" href="http://www.wdzj.com" target="_bank">网贷之家</a>
+		<a style="margin-left:20px;font-size: 18px;line-height: 50px;color: #000000" href="http://bbs.wangdaiguancha.com" target="_bank">网贷观察网</a>
+	</div>
+	<div id="index_iconBox5" style="max-width: 1920px;min-width: 900px;"style="font-size:14px;">
+		<div style="height:50px;padding-bottom:10px;max-width: 1920px;min-width: 900px;">
+			<div id="foot">
+				<span style="margin-right: 20px;">QQ群：<font color="#fd5a5a">198595909</font></span><br/>
+				<span style="margin-right: 20px;">全国统一客服电话：（工作日9：00-18：00）<font color="#fd5a5a">400-080-5611</font></span><br/>
+				<span style="padding-right: 20px">上海市黄浦区延安东路700号港泰广场1401-1402</span>
+				<div style="text-align:center;color: #999999;font-size: 12px;margin-top: 20px">温馨提示：市场有风险 投资虚谨慎</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="index_iconBox6">
+		<p>Copyright&copy;万米财富管理有限公司ll Rights Reserved</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
